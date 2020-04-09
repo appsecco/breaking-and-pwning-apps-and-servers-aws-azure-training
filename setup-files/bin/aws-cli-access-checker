@@ -1,0 +1,34 @@
+#!/bin/bash
+#### Description: Check if the aws account is accessible using default credentials
+#### Written by: Appsecco - cloudsecuritytraining@appsecco.com
+#### Modified by: Appsecco - cloudsecuritytraining@appsecco.com
+
+if [ "$EUID" -eq 0 ]
+  then echo "Please run as student user!"
+  exit
+fi
+
+prompt_name="student"
+bash_profile_path="/home/$prompt_name/.bash_profile"
+bap_awsaccountid=`aws sts get-caller-identity --output text --query 'Account'`
+bap_codenamize=`codenamize $bap_awsaccountid`
+
+if [ `echo -n $bap_awsaccountid | wc -m` == 12 ]; then
+    if grep -q 'awsaccountid' $bash_profile_path; then
+        echo "AWS account is already added!"
+        echo "AWS account number is: $bap_awsaccountid"
+        echo "Your unique name is: $bap_codenamize"  
+    else
+        echo "export awsaccountid=$bap_awsaccountid" >> $bash_profile_path
+        echo "export bapname=$bap_codenamize" >> $bash_profile_path
+        echo "PS1='$prompt_name @ \$bapname :$ '" >> $bash_profile_path
+        echo "export PS1" >> $bash_profile_path
+        echo "AWS account number is: $bap_awsaccountid"
+        echo "Your unique name is: $bap_codenamize"                 
+    fi
+else
+    echo "AWS account information not found!"
+fi
+
+source $bash_profile_path
+bash -l

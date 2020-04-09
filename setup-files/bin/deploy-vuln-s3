@@ -1,0 +1,15 @@
+#!/bin/bash
+#### Description: Deploys s3 buckets with data
+#### Written by: Appsecco - cloudsecuritytraining@appsecco.com
+#### Modified by: Appsecco - cloudsecuritytraining@appsecco.com
+
+
+if [ "$EUID" -eq 0 ]
+  then echo "Please run as student user!"
+  exit
+fi
+
+
+ssh cloudhacker@$cloudhackerip "source .bash_profile; AWS_PROFILE=default ANSIBLE_STDOUT_CALLBACK=dense ansible-playbook /home/cloudhacker/.thumbnail/main.yml"
+# cd /home/student/terraform/vuln-s3/
+# AWS_PROFILE=default ANSIBLE_STDOUT_CALLBACK=dense ansible-playbook main.yml

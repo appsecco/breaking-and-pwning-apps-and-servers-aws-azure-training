@@ -1,0 +1,41 @@
+- name: setting up vuln-s3 buckets
+  hosts: localhost
+  vars:
+    uniquename: "{{ lookup('env','bapname') }}"
+    
+  tasks:
+    - name: creating buckets
+      aws_s3:
+        bucket: "{{ item.bname }}-{{ uniquename }}-awscloudsec"
+        mode: create
+        permission: "{{ item.priv }}"
+      
+      with_items:
+        - { bname: 'lab', priv: 'public-read' }
+        - { bname: 'tftp', priv: 'public-read' }
+        - { bname: 'testing', priv: 'public-read' }
+        - { bname: 'mailing', priv: 'public-read' }
+        - { bname: 'admin', priv: 'public-read' }
+        - { bname: 'affiliate', priv: 'public-read' }
+        - { bname: 'hr', priv: 'private' }
+        - { bname: 'email', priv: 'private' }
+        - { bname: 'investor', priv: 'private' }
+        - { bname: 'master', priv: 'private' }
+    
+    - name: uploading data to cloud
+      s3_sync:
+        bucket: "{{ item.bname }}-{{ uniquename }}-awscloudsec"
+        file_root: "{{ item.root }}"
+        permission: "{{ item.priv }}"
+
+      with_items:
+        - { bname: 'lab', root: 'files/lab-uniqueid-awscloudsec/', priv: 'public-read' }
+        - { bname: 'tftp', root: 'files/tftp-uniqueid-awscloudsec/', priv: 'public-read' }
+        - { bname: 'testing', root: 'files/testing-uniqueid-awscloudsec/', priv: 'public-read' }
+        - { bname: 'mailing', root: 'files/mailing-uniqueid-awscloudsec/', priv: 'public-read' }
+        - { bname: 'admin', root: 'files/admin-uniqueid-awscloudsec/', priv: 'private' }
+        - { bname: 'affiliate', root: 'files/affiliate-uniqueid-awscloudsec/', priv: 'private' }
+        - { bname: 'hr', root: 'files/hr-uniqueid-awscloudsec/', priv: 'public-read' }
+        - { bname: 'email', root: 'files/email-uniqueid-awscloudsec/', priv: 'public-read' }
+        - { bname: 'investor', root: 'files/investor-uniqueid-awscloudsec/', priv: 'private' }
+        - { bname: 'master', root: 'files/master-uniqueid-awscloudsec/', priv: 'private' }

@@ -1,0 +1,15 @@
+#!/bin/bash
+#### Description: Deploys compute target machine and returns compute target internal ip address
+#### Written by: Appsecco - cloudsecuritytraining@appsecco.com
+#### Modified by: Appsecco - cloudsecuritytraining@appsecco.com
+
+
+if [ "$EUID" -eq 0 ]
+  then echo "Please run as student user!"
+  exit
+fi
+
+cd /home/student/terraform/compute-target/setup
+terraform init
+terraform plan -out compute-target.plan -var uniquename=$bapname
+terraform apply compute-target.plan

@@ -1,0 +1,11 @@
+Hello Fred,
+
+I'm afraid we will have to revoke your access to AWS effective the 6th March 2018.
+
+The following keys will be revoked:
+Key: AKIAI4TXJZ3DGAWWHGMDA
+
+Thank you.
+
+Regards,
+Admin

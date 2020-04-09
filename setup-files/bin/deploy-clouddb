@@ -1,0 +1,15 @@
+#!/bin/bash
+#### Description: Deploys RDS MySQL and EC2 and returns target internal ip address and endpoint
+#### Written by: Appsecco - cloudsecuritytraining@appsecco.com
+#### Modified by: Appsecco - cloudsecuritytraining@appsecco.com
+
+
+if [ "$EUID" -eq 0 ]
+  then echo "Please run as student user!"
+  exit
+fi
+
+cd /home/student/terraform/clouddb/setup
+terraform init
+terraform plan -out cloud-db.plan
+terraform apply cloud-db.plan

@@ -1,0 +1,15 @@
+#!/bin/bash
+#### Description: Deploys cloudhacker machine and returns cloudhacker ip
+#### Written by: Appsecco - cloudsecuritytraining@appsecco.com
+#### Modified by: Appsecco - cloudsecuritytraining@appsecco.com
+
+
+if [ "$EUID" -eq 0 ]
+  then echo "Please run as student user!"
+  exit
+fi
+
+cd /home/student/terraform/cloudhacker/setup
+terraform init
+terraform plan -out cloudhacker.plan
+terraform apply cloudhacker.plan

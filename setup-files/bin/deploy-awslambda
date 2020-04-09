@@ -1,0 +1,12 @@
+#!/bin/bash
+#### Description: Deploys vulnerable lambda and returns API endpoint
+#### Written by: Appsecco - cloudsecuritytraining@appsecco.com
+#### Modified by: Appsecco - cloudsecuritytraining@appsecco.com
+
+if [ "$EUID" -eq 0 ]
+  then echo "Please run as student user!"
+  exit
+fi
+
+cd /home/student/terraform/cloudlambda/md5sum
+chalice deploy

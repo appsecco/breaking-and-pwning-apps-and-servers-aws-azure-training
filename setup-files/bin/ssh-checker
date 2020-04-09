@@ -1,0 +1,25 @@
+#!/bin/bash
+#### Description: Check if ssh-key is available (or) generate and add to ssh-agent
+#### Written by: Appsecco - cloudsecuritytraining@appsecco.com
+#### Modified by: Appsecco - cloudsecuritytraining@appsecco.com
+
+if [ "$EUID" -eq 0 ]
+  then echo "Please run as student user!"
+  exit
+fi
+
+user_name="student"
+ssh_keyfile_path="/home/$user_name/.ssh/id_rsa"
+ssh_keyfile_dir="/home/$user_name/.ssh/"
+
+if [ ! -f $ssh_keyfile_path ]; then
+    ssh-keygen -t rsa -f $ssh_keyfile_path -q -P ""
+    chown -R $user_name:$user_name $ssh_keyfile_dir
+    echo "Created new ssh key pair!"
+    ssh-add $ssh_keyfile_path
+    echo "Added ssh key pair to your ssh-agent!"
+else
+    echo "Your ssh key pair already exists!"
+    ssh-add $ssh_keyfile_path
+    echo "Added ssh key pair to your ssh-agent!"
+fi

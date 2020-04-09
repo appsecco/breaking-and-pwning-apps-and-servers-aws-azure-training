@@ -1,0 +1,10 @@
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+DEFGHIJKLMNOPQRSTUVWXYZABC
+
+97 - 122
+
+
+caesar's cipher primarily just shifts the alphabet to the right by three characters, although this is not a necessity. the shift number could be any number between one and twenty six. this algorithm also replaces any punctuation by a dot. easily breakable by brute force attacks and character frequency analysis. e is the most common character in the english language, followed by e t o a n etc. that should help.
+
+
+fdhvdu.v.flskhu.sulpdulob.mxvw.vkliwv.wkh.doskdehw.wr.wkh.uljkw.eb.wkuhh.fkdudfwhuv..dowkrxjk.wklv.lv.qrw.d.qhfhvvlwb..wkh.vkliw.qxpehu.frxog.eh.dqb.qxpehu.ehwzhhq.rqh.dqg.wzhqwb.vla..wklv.dojrulwkp.dovr.uhsodfhv.dqb.sxqfwxdwlrq.eb.d.grw..hdvlob.euhdndeoh.eb.euxwh.irufh.dwwdfnv.dqg.fkdudfwhu.iuhtxhqfb.dqdobvlv..h.lv.wkh.prvw.frpprq.fkdudfwhu.lq.wkh.hqjolvk.odqjxdjh..iroorzhg.eb.h.w.r.d.q.hwf..wkdw.vkrxog.khos.
