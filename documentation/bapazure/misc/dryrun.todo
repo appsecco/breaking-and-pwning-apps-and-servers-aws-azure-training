@@ -1,0 +1,15 @@
+ Breaking and Pwning Servers and Apps in Azure:
+    Introduction and environment setup:
+        ☐ @Trainer provides gitbook link to follow the instructions
+            ☐ @Student confirms he can access the gitbook and follow this gitbook throughout the training
+        ☐ @Trainer introduces the training and the agenda
+            ☐ @Trainer gives the objective of the training
+            ☐ @Trainer gives the outcomes expected for trainees once they finish the training
+        ☐  @Trainer confirms if everyone is ready
+            ☐ @Student confirms if internet access is working fine by browsing to (TRAINING URL)
+            ☐ @Student confirms if he/she joined slack group (if required)
+            ☐ @Student confirms that Azure cloud account with neccessary access and billing setup is done
+        ☐ @Trainer shows how to access and use the Azure cloud shell
+            ☐ @Student confirms that he can access the cloud shell by comparing the ideal output from @Trainer screen or gitbook screenshot
+    Azure Cloud Compute:
+    

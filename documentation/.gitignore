@@ -1,0 +1,9 @@
+node_modules
+_book
+.DS_Store
+creds.md
+Breaking-and-Pwning-Cloud-Applications-and-Servers-in-AWS-and-Azure
+Breaking-and-Pwning-Cloud-Applications-and-Servers-in-AWS-and-Azure.zip
+*.pdf
+*.mobi
+*.epub
