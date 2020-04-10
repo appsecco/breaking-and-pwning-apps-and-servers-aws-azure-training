@@ -1,6 +1,18 @@
-# Breaking and Pwning Apps and Servers on AWS and Azure - Courseware and Content
+# Breaking and Pwning Apps and Servers on AWS and Azure - Free Training Courseware and Labs
 
-![header](github-images/github-background.png)
+![Breaking and Pwning Apps and Servers AWS+Azure Free Training](github-images/breaking-and-pwning-apps-and-servers-aws-azure-training.jpg)
+
+## Introduction
+
+The world is changing right in front of our eyes. The way we have been learning is going to be radically transformed by the time we all have eradicated the COVID19 from our lives.
+
+While we figure out what is the best way to transfer our knowledge to you, we realise that by the time world is out of the lockdown, a cloud focussed pentesting training is likely going to be obsolete in parts.
+
+So as a contribution towards the greater security community, we decided to open source the complete training.
+
+Hope you enjoy this release and come back to us with questions, comments, feedback, new ideas or anything else that you want to let us know! Looking forward to hacking with all of you!
+
+## Description 
 
 Amazon Web Services (AWS) and Azure run the most popular and used cloud infrastructure and boutique of services. There is a need for security testers, Cloud/IT admins and people tasked with the role of DevSecOps to learn on how to effectively attack and test their cloud infrastructure. In this tools and techniques based training we cover attack approaches, creating your attack arsenal in the cloud, distilled deep dive into AWS and Azure services and concepts that should be used for security.
 
