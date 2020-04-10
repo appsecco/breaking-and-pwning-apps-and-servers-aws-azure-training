@@ -1,5 +1,7 @@
 # Breaking and Pwning Apps and Servers on AWS and Azure - Courseware and Content
 
+![header](github-images/github-background.png)
+
 Amazon Web Services (AWS) and Azure run the most popular and used cloud infrastructure and boutique of services. There is a need for security testers, Cloud/IT admins and people tasked with the role of DevSecOps to learn on how to effectively attack and test their cloud infrastructure. In this tools and techniques based training we cover attack approaches, creating your attack arsenal in the cloud, distilled deep dive into AWS and Azure services and concepts that should be used for security.
 
 The training covers a multitude of scenarios taken from our vulnerability assessment, penetration testing and OSINT engagements which take the student through the journey of discovery, identification and exploitation of security weaknesses, misconfigurations and poor programming practices that can lead to complete compromise of the cloud infrastructure.
