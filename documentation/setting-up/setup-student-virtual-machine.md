@@ -22,7 +22,7 @@ The username on the student virtual machine **has to be ** `student`.
 Install the following software on the student virtual machine
 
 1. python3 pip (`sudo apt install python3-pip`)
-2. Terraform (`sudo snap install terraform`)
+2. Terraform (`sudo apt install unzip;wget https://releases.hashicorp.com/terraform/0.11.3/terraform_0.11.3_linux_amd64.zip;unzip terraform_0.11.3_linux_amd64.zip;sudo mv terraform /usr/local/bin/`)
 3. aws-cli (`pip3 install --upgrade --user awscli`)
 4. ansible (`sudo apt install ansible`)
 5. codenamize (`pip3 install codenamize --user`)
