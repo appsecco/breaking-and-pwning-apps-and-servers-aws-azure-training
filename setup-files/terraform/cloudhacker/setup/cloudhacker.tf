@@ -121,7 +121,7 @@ resource "aws_eip_association" "attacker-eip-associate" {
 // Uploading the ssh key pair to AWS
 resource "aws_key_pair" "cloudhackerlabkey" {
     key_name = "cloudhackerlabkey"
-    public_key = "${file("~/.ssh/id_rsa.pub")}"
+    public_key = "${file("/home/student/.ssh/id_rsa.pub")}"
 }
 
 
