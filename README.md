@@ -62,3 +62,10 @@ The primary things in this repo are:
 
 - Documentation and Gitbook are released under [Creative Commons Attribution Share Alike 4.0 International](CC-BY-SA-LICENSE.txt)
 - Lab material including any code, script are release under [MIT License](MIT-LICENSE.txt)
+
+## About Appsecco
+
+At Appsecco we provide advice, testing and training around software, infra, web and mobile apps, especially that are cloud hosted. We also specialise in auditing AWS environments as per the AWS CIS Foundations Benchmark to create a picture of the current state of security in your AWS environment. Our experience has led us to creating multiple hands on training courses like the very popular "Breaking and Pwning Apps and Servers on AWS and Azure" and "Automated Defence using Cloud Services for AWS, Azure and GCP".
+
+* https://appsecco.com
+* https://blog.appsecco.com
