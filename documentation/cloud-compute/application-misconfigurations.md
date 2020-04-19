@@ -33,6 +33,15 @@ In Burp, on the student VM, make the following change
 
 This will tunnel all web traffic through the SSH connection to the attacker EC2 instance.
 
+Lastly, configure Firefox to use Burp. This can be done using `Preferences > General > Network Settings`.
+
+- Select "Manual proxy configuration" and set the following values
+    - HTTP Proxy : 127.0.0.1
+    - Port: 8080
+- Click "OK"
+
+This will setup Firefox to use Burp, which inturn is using the SSH tunnel to send traffic, allowing you to browse the application running on the EC2 instance even though its not accessible directly.
+
 ## Steps to create a DNS name for the app server
 
 On the student VM, add a host file entry to point your system to a domain name for the web application.
