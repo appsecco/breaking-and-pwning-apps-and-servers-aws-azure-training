@@ -39,7 +39,7 @@ The output of this script is the IP address of the target EC2 which will be atta
 
 Nmap is one of the world's most widely used port scanning utilities. We can use it to discover the services exposed by the target EC2
 
-Run the following commands to complete this exercise
+Run the following commands to complete this exercise from the attacker machine
 
     sudo nmap -sS --script http-enum -v --top-ports 10000 -sV -g80 <TARGET-EC2-IP-ADDRESS>
 
@@ -54,6 +54,8 @@ Attacking SSH using hydra. Run this on the attacker machine.
     hydra -f -v -V -t20 -l ec2-user -P custom-rockyou.txt <TARGET-EC2-IP-ADDRESS> ssh
 
 ### Attack 3 - Dictionary attack against RDP (Demo)
+
+**This is a demo. This machine is NOT created using the deploy-compute-target. We set this up during the in-person training.**
 
 Just like an exposed SSH service can be attacked for Linux based distributions, misconfigured Windows machines exposing their Remote Desktop Port (TCP 3389) can also be attacked.
 
