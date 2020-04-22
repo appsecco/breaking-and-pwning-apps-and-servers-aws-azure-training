@@ -39,7 +39,7 @@ The output of this script is the IP address of the target EC2 which will be atta
 
 Nmap is one of the world's most widely used port scanning utilities. We can use it to discover the services exposed by the target EC2
 
-Run the following commands to complete this exercise from the attacker machine
+Run the following commands to complete this exercise from the attacker machine. Please replace `TARGET-EC2-IP-ADDRESS` with the IP address from the output of the deploy command.
 
     sudo nmap -sS --script http-enum -v --top-ports 10000 -sV -g80 <TARGET-EC2-IP-ADDRESS>
 
