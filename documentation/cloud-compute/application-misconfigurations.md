@@ -52,11 +52,11 @@ To do this, follow these steps
 2. open the `/etc/hosts` file as root
 3. add the following to the end of the file. Replace the text unique-name with your unique-name
 
-`10.0.100.11 public-site-unique-name.cloudsec.training`
+`10.0.100.11 publicsite-unique-name.cloudsec.training`
 
 For example, in our case the line entry would look like
 
-`10.0.100.11 public-site-jumping-tractor.cloudsec.training`
+`10.0.100.11 publicsite-jumping-tractor.cloudsec.training`
 
 
 ## Steps to attack
