@@ -26,7 +26,7 @@ Install the following software on the student virtual machine
 3. aws-cli (`pip3 install --upgrade --user awscli`)
 4. ansible (`sudo apt install ansible`)
 5. codenamize (`pip3 install codenamize --user`)
-6. boto3 (python package)
+6. boto3 (`pip3 install boto3`)
 7. Azure cli (`curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`)
 8. cli53 - get the binary release from `https://github.com/barnybug/cli53/releases`
 9. Mousepad/Leafpad
@@ -43,7 +43,7 @@ Install the following software on the student virtual machine
 
 ### Step 2 - Adding terraform scripts in home directory
 
-1. Create a hidden folder called `terraform` in the `student` user's home directory using `mkdir terraform`
+1. Create a folder called `terraform` in the `student` user's home directory using `mkdir terraform`
 2. Verify if the folder is created using `ls -ltra /home/student/terraform`
 3. Recursively copy files from inside the `terraform` folder into the `/home/student/terraform` folder. You can use `cp -r  setup-files/terraform/* /home/student/terraform/` to do this.
 4. Verify if the files have been copied using `ls -ltra /home/student/terraform/`
