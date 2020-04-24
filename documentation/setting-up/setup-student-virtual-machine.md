@@ -33,6 +33,7 @@ Install the following software on the student virtual machine
 10. Burpsuite
 11. Firefox
 12. Virtualbox guest additions
+13. chalice (`pip3 install --user chalice`)
 
 ## Steps to setup the student virtual machine
 
