@@ -50,6 +50,24 @@ Install the following software on the student virtual machine
 
 **The VM is now ready for the training**
 
+## Time Correction Commands
+
+**If, and only if, the clock on this virtual machine syncs out of the correct time then run the following commands from a terminal**
+
+```
+sudo -i
+echo -n Asia/Kolkata > /etc/timezone
+rm /etc/localtime
+ln -s /usr/share/zoneinfo/h /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
+sudo service ntp stop
+sudo ntpdate -s time.nist.gov
+sudo service ntp start
+Note: Reboot the machine if the time change is not automatic
+```
+
+For other timezones, obtain the timezone name from `ls -l /usr/share/zoneinfo/`
+
+
 ## Additional information
 
 No additional information for this section
