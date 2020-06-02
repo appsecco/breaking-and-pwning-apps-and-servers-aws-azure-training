@@ -56,7 +56,7 @@ This section contains links for additional reading that are relevant to the trai
 
 ## Azure
 
-* [Microsoft Azure in Plain English](https://www.expeditedssl.com/azure-in-plain-english)
+* [Microsoft Azure in Plain English](https://web.archive.org/web/20190321175020/https://www.expeditedssl.com/azure-in-plain-english)
 * [Azure Security Centre](https://azure.microsoft.com/en-in/services/security-center/)
 * [Azure security technical capabilities](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/security/azure-security-technical-capabilities.md)
 * [Security auditing tool for Azure environments](https://github.com/nccgroup/azucar)

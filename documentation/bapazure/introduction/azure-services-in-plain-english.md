@@ -8,4 +8,4 @@ The number of services that Azure provides, like AWS, can be overwhelming. Docum
 
 The following documentation can be used to understand the various Azure Services in an easy to understand everyday language
 
-- [Azure in Plain English](https://www.expeditedssl.com/azure-in-plain-english)
+- [Azure in Plain English](https://web.archive.org/web/20190321175020/https://www.expeditedssl.com/azure-in-plain-english)
