@@ -79,9 +79,18 @@ Following techniques are supported by Slurp for enumerating S3 buckets -
 
 **internal mode (Using AWS credentials)**
 
+Unlike other modes in Slurp, this mode works with AWS credentials stored as named profiles in `~/.aws/credentials`
+
+This mode is used to identify mis-configurations in S3 Buckets that the set of AWS credentials can access.
+
+This mode is only supported in the newer version of slurp.
+
 *For this technique to work, make sure atleast one profile is configured under ~/.aws/credentials*
 
-    ./slurp internal
+Run the following commands to download latest version of Slurp and do an internal scan using `default` named profile - 
+
+    wget https://github.com/0xbharath/slurp/releases/download/1.1.0/slurp-1.1.0-linux-amd64 && && chmod +x slurp-1.1.0-linux-amd64 && ./slurp internal
+
 
 ## Additional exercise - Writing data to a bucket
 
