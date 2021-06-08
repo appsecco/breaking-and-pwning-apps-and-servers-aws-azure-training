@@ -27,12 +27,13 @@ Install the following software on the student virtual machine
 4. ansible (`sudo apt install ansible`)
 5. codenamize (`pip3 install codenamize --user`)
 6. boto3 (`pip3 install boto3`)
-7. Azure cli (`curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`)
-8. cli53 - get the binary release from `https://github.com/barnybug/cli53/releases`
-9. Mousepad/Leafpad
-10. Burpsuite
-11. Firefox
-12. Virtualbox guest additions
+7. chalice (`pip3 install chalice`)
+8. Azure cli (`curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`)
+9. cli53 - get the binary release from `https://github.com/barnybug/cli53/releases`
+10. Mousepad/Leafpad
+11. Burpsuite
+12. Firefox
+13. Virtualbox guest additions
 
 ## Steps to setup the student virtual machine
 
@@ -45,7 +46,7 @@ Install the following software on the student virtual machine
 
 1. Create a folder called `terraform` in the `student` user's home directory using `mkdir terraform`
 2. Verify if the folder is created using `ls -ltra /home/student/terraform`
-3. Recursively copy files from inside the `terraform` folder into the `/home/student/terraform` folder. You can use `cp -r  setup-files/terraform/* /home/student/terraform/` to do this.
+3. Recursively copy files from inside the `terraform` folder into the `/home/student/terraform` folder. You can use `cp -r setup-files/terraform/* /home/student/terraform/` to do this.
 4. Verify if the files have been copied using `ls -ltra /home/student/terraform/`
 
 **The VM is now ready for the training**
@@ -66,7 +67,6 @@ Note: Reboot the machine if the time change is not automatic
 ```
 
 For other timezones, obtain the timezone name from `ls -l /usr/share/zoneinfo/`
-
 
 ## Additional information
 
