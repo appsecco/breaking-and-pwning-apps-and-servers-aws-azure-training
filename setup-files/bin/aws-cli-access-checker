@@ -9,7 +9,13 @@ if [ "$EUID" -eq 0 ]
 fi
 
 prompt_name="student"
-bash_profile_path="/home/$prompt_name/.bash_profile"
+
+if uname -a | grep -q 'Darwin'; then
+  bash_profile_path="/home/$prompt_name/.bash_profile"
+else
+  bash_profile_path="/home/$prompt_name/.bashrc"
+fi
+
 bap_awsaccountid=`aws sts get-caller-identity --output text --query 'Account'`
 bap_codenamize=`codenamize $bap_awsaccountid`
 
@@ -17,14 +23,14 @@ if [ `echo -n $bap_awsaccountid | wc -m` == 12 ]; then
     if grep -q 'awsaccountid' $bash_profile_path; then
         echo "AWS account is already added!"
         echo "AWS account number is: $bap_awsaccountid"
-        echo "Your unique name is: $bap_codenamize"  
+        echo "Your unique name is: $bap_codenamize"
     else
         echo "export awsaccountid=$bap_awsaccountid" >> $bash_profile_path
         echo "export bapname=$bap_codenamize" >> $bash_profile_path
         echo "PS1='$prompt_name @ \$bapname :$ '" >> $bash_profile_path
         echo "export PS1" >> $bash_profile_path
         echo "AWS account number is: $bap_awsaccountid"
-        echo "Your unique name is: $bap_codenamize"                 
+        echo "Your unique name is: $bap_codenamize"
     fi
 else
     echo "AWS account information not found!"
