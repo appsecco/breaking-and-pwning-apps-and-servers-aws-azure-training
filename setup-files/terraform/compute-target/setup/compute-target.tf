@@ -48,12 +48,12 @@ data "aws_security_group" "target-sg" {
 
 
 resource "aws_iam_instance_profile" "ec2access" {
-  name  = "ec2acess"
+  name  = "ec2access"
   role = "${aws_iam_role.ec2accessrole.name}"
 }
 
 resource "aws_iam_role" "ec2accessrole" {
-  name = "ec2acess"
+  name = "ec2access"
   path = "/"
 
   assume_role_policy = <<EOF
